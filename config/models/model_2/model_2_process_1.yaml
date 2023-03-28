@@ -1,0 +1,21 @@
+model:
+  path      : ${hydra:runtime.cwd}/models/model_2
+  file      : model
+  name      : model_new_2
+  optimizer : adam
+  loss      : categorical_crossentropy  
+  layer: 
+    layer_1: {"units"   : 128}
+    layer_2: {"units"   : 32, "activation" : "relu"}
+    layer_4: {"dropout" : 0.2}
+    layer_5: {"units"   : 16, "activation" : "relu"}
+    layer_6: {"dropout" : 0.2}
+
+process:
+  name             : process_1
+  epochs           : 2000
+  batch_size       : 32
+  validation_split : 0.2
+  patience         : 5
+  seed             : 47
+
