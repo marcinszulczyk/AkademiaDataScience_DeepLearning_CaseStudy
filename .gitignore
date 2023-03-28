@@ -6,9 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# Config
+config/*.json
+multirun/
+data/
+
 # Distribution / packaging
 .Python
 build/
+outputs/
 develop-eggs/
 dist/
 downloads/
